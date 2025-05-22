@@ -24,6 +24,15 @@ Use ListIterator objects to read the elements of the first
 list and insert them into the second list.
 
 ### LEVEL 1 - EXERCISE 3
+Given the file countrties.txt that contains countries and capitals. 
+The program must read the file and save the data in a 
+HashMap<String, String>. The program asks for the user's name, 
+and then it must display a country randomly, saved in the HashMap. 
+The user must write the name of the capital of the country in question. 
+If they get it right, they are given a point. This action is repeated 10 
+times. Once the capitals of 10 countries have been asked for randomly, 
+then the user's name and their score must be saved in a file called 
+classificacio.txt.
 
 ### LEVEL 2 - EXERCISE 1
 

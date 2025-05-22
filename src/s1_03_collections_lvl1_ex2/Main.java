@@ -10,7 +10,6 @@ public class Main {
         List<Integer> myList = new ArrayList<Integer>();
         List<Integer> reversedList = new ArrayList<Integer>();
 
-        //myFirstList.add(2, 13, 213, 7, 1412, 20);
         Collections.addAll(myList, 2, 13, 213, 7, 1412, 20);
 
         System.out.println("ArrayList Elements in Normal Order");
