@@ -15,6 +15,13 @@ HashSet and make sure that it does not allow duplicates.
 Iterate over the list with a for loop and an iterator.
 
 ### LEVEL 1 - EXERCISE 2
+Create and populate a List<Integer>.
+
+Create a second List<Integer> and insert the elements of the 
+first list into the second list in reverse order.
+
+Use ListIterator objects to read the elements of the first 
+list and insert them into the second list.
 
 ### LEVEL 1 - EXERCISE 3
 
