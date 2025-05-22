@@ -2,6 +2,7 @@ package s1_01_collections_lvl1_ex1;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,7 +26,7 @@ public class Main {
         months.add(7, august);
 
         System.out.println(months.get(7).getName());
-        System.out.println(months.toString());
+        System.out.println("ArrayList (ordered items): " + months.toString());
 
         HashSet<Month> hashMonths = new HashSet<>(months);
 
@@ -38,11 +39,16 @@ public class Main {
 
         //For loop
         for (Month monthName : hashMonths) {
-            System.out.println(monthName);
+            System.out.println("HashSet (unordered items): " + monthName);
         }
 
-        //Iterator
+        //Iterator (arrayList months)
+        Iterator<Month> itMonths = months.iterator();
+        //System.out.println("Iterator first element: " + itMonths.next());
 
+        while(itMonths.hasNext()) {
+            System.out.println("Iterator: " + itMonths.next());
+        }
 
     }
 }
