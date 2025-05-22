@@ -22,6 +22,7 @@ public class Main {
         months.add(7, august);
 
         System.out.println(months.get(7).getName());
+        System.out.println(months.toString());
 
     }
 }
