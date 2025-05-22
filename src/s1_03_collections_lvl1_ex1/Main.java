@@ -1,4 +1,4 @@
-package s1_01_collections_lvl1_ex1;
+package s1_03_collections_lvl1_ex1;
 
 import java.util.ArrayList;
 import java.util.HashSet;
