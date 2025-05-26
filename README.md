@@ -43,7 +43,10 @@ into a HashSet created in the application's main().
 There can be restaurants with the same name with different scores, 
 but there cannot be restaurants with the same name and score.
 
-### LEVEL 2 - EXERCISE 2
+### LEVEL 2 - EXERCISE 2 (extends exercise 1)
+Using the class from the previous program, create the 
+implementation necessary so that objects of the Restaurant class 
+are sorted by name and by score in descending order.
 
 ### TECHNOLOGIES
 | Package     | Version    | Description                |
