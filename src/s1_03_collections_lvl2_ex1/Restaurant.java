@@ -24,4 +24,8 @@ public class Restaurant {
     public void getScore(int score) {
         this.score = score;
     }
+
+    public String toString() {
+        return "Name: " + this.getName() + ", Score: " + this.getScore();
+    }
 }
