@@ -1,18 +1,59 @@
 package s1_03_collections_lvl1_ex3;
 
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.io.*;
+import java.util.*;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class Main {
+    final static String filePath = "./countries.txt"; //OPTION 1: Usar txt desde carpeta raíz de proyecto
+    //OPTION 2: cargar archivo desde /src
+//    InputStream input = Main.class.getResourceAsStream("/s1_03_collections_lvl1_ex3/countries.txt");
+//    BufferedReader br = new BufferedReader(new InputStreamReader(input));
+
+    public static void main(String[] args) {
+        Map<String, String> mapFromFile = HashMapFromTextFile();
+
+        // Mostrar contenido del HashMap
+        for (Map.Entry<String, String> entry : mapFromFile.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
         }
     }
+
+    public static Map<String, String> HashMapFromTextFile() {
+        Map<String, String> map = new HashMap<>();
+        BufferedReader br = null;
+
+        try {
+            File file = new File(filePath);
+            br = new BufferedReader(new FileReader(file));
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                // Separar por " : " //Added in countries.txt
+                String[] parts = line.split(":", 2);
+
+                if (parts.length >= 2) {
+                    String country = parts[0].trim();
+                    String capital = parts[1].trim();
+
+                    if (!country.isEmpty() && !capital.isEmpty()) {
+                        map.put(country, capital);
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (br != null) br.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return map;
+    }
 }
+
 //Read each line of the document
 //bf = new BufferedWriter( new FileWriter(file_name) );
 //At each line, split the key-value pair by ":" and put it in the map
