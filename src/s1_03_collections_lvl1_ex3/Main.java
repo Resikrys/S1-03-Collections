@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Player name: ");
-        String playerName = scanner.next();
+        String playerName = scanner.nextLine();
         Player player = new Player(playerName);
 
         // Read HashMap from file
@@ -27,8 +27,6 @@ public class Main {
         // Obtain countres list (map keys)
         List<String> countries = new ArrayList<>(mapFromFile.keySet());
         Collections.shuffle(countries); // Random questions
-
-        System.out.println("Game start!");
 
         // Ask 10 times
         for (int i = 0; i < 10 && i < countries.size(); i++) {
@@ -100,15 +98,3 @@ public class Main {
         }
     }
 }
-
-//Read each line of the document
-//bf = new BufferedWriter( new FileWriter(file_name) );
-//At each line, split the key-value pair by ":" and put it in the map
-//return the map
-//Exemple: https://www.geeksforgeeks.org/reading-text-file-into-java-hashmap/
-//Scanner + loop 10 cops demanant resposta a un país random del map (comparar values)
-//Scanner: String userName, String answer (loop 10 times)
-//If answer correct (+1) if not (score es manté igual) -> sort map countries & compare answer
-//Sumatori score into totalScore & store it into new map as value of key userName
-//Crear clasificacio.txt + emmagatzemar/write nom usuari i totalScore
-//Class player: userName i score + list Players map (key-name/value-score) & create classificacio

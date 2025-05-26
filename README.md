@@ -35,14 +35,22 @@ then the user's name and their score must be saved in a file called
 classificacio.txt.
 
 ### LEVEL 2 - EXERCISE 1
+Create a class called Restaurant with two attributes: name(String) 
+and score(int). Implement the necessary methods so that 
+Restaurant objects with the same name and score cannot be inserted 
+into a HashSet created in the application's main().
+
+There can be restaurants with the same name with different scores, 
+but there cannot be restaurants with the same name and score.
 
 ### LEVEL 2 - EXERCISE 2
 
 ### TECHNOLOGIES
-| Package | Version    | Description                |
-|---------|------------|----------------------------|
-| `java`  | ^1.8.0_441 | Principal project language |
+| Package     | Version    | Description                |
+|-------------|------------|----------------------------|
+| `java`      | ^1.8.0_441 | Principal project language |
 | `java.util` | ^1.8.0_441 | Java standard library   |
+| `java.io`   | ^1.8.0_441 | Java standard library   |
 
 ### REQUIREMENTS
 Local environment: `IntelliJ or Eclipse`
