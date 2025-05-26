@@ -28,7 +28,7 @@ public class Main {
             String line;
 
             while ((line = br.readLine()) != null) {
-                // Separar por " : " //Added in countries.txt
+                // Split by " : " //Added in countries.txt
                 String[] parts = line.split(":", 2);
 
                 if (parts.length >= 2) {
