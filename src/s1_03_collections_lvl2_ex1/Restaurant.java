@@ -1,5 +1,7 @@
 package s1_03_collections_lvl2_ex1;
 
+import java.util.Objects;
+
 public class Restaurant {
     private String name;
     private int score;
@@ -38,6 +40,7 @@ public class Restaurant {
         return Objects.hash(name.toLowerCase(), score);
     }
 
+    @Override
     public String toString() {
         return "Name: " + this.getName() + ", Score: " + this.getScore();
     }
