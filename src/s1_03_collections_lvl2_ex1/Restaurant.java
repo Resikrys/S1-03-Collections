@@ -25,6 +25,19 @@ public class Restaurant {
         this.score = score;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Restaurant)) return false;
+        Restaurant that = (Restaurant) o;
+        return score == that.score && name.equalsIgnoreCase(that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name.toLowerCase(), score);
+    }
+
     public String toString() {
         return "Name: " + this.getName() + ", Score: " + this.getScore();
     }
