@@ -23,7 +23,7 @@ public class Restaurant {
         this.name = name;
     }
 
-    public void getScore(int score) {
+    public void setScore(int score) {
         this.score = score;
     }
 
