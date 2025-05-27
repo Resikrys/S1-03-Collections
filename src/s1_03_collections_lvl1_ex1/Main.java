@@ -3,10 +3,11 @@ package s1_03_collections_lvl1_ex1;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Month> months = new ArrayList<Month>();
+        List<Month> months = new ArrayList<Month>();
 
         //Create & Add month to ArrayList
         months.add(new Month("January"));
